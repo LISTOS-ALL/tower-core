@@ -1,4 +1,7 @@
-import { DataInterface } from '../modules';
+export interface DataInterface {
+    type: string;
+    value: string;
+}
 
 export const jsonToArray = list => {
     if (!Object.keys(list).length) {

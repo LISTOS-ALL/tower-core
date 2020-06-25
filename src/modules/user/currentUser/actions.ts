@@ -1,10 +1,24 @@
-import { UserProfile } from '../';
 import {
     CURRENT_USER_RESET,
     GET_CURRENT_USER_DATA,
     GET_CURRENT_USER_ERROR,
     GET_CURRENT_USER_FETCH,
 } from '../../constants';
+
+export interface UserProfile {
+    uid: string;
+    first_name: string;
+    last_name: string;
+    dob: string;
+    address: string;
+    postcode: string;
+    city: string;
+    country: string;
+    state: string;
+    created_at: string;
+    updated_at: string;
+    metadata?: string;
+}
 
 export interface CurrentUserInterface {
     email: string;
