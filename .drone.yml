@@ -1,0 +1,21 @@
+kind: pipeline
+name: "Push"
+
+concurrency:
+  limit: 2
+
+steps:
+  - name: "Test & Build"
+    image: node:10.11
+    commands:
+      - yarn
+      - yarn build
+      - yarn test
+
+trigger:
+  event:
+  - push
+  branch:
+    exclude:
+    - master
+
