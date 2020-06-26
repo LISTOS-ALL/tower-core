@@ -21,7 +21,7 @@
       "./node_modules/@types"
     ],
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
     "lib": [
       "es2015",
       "dom",
@@ -31,9 +31,10 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "noEmit": false,
+    "noEmit": true,
     "jsx": "preserve",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "isolatedModules": true
   },
   "include": [
     "./src"
